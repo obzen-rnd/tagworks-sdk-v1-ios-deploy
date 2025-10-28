@@ -1,0 +1,1373 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target x86_64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name TagWorks_SDK_iOS_v1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+import AdSupport
+import AppTrackingTransparency
+import CoreGraphics
+import CryptoKit
+import Darwin
+import Foundation
+import ObjectiveC
+import Security
+import Swift
+@_exported import TagWorks_SDK_iOS_v1
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import ObjectiveC.runtime
+@objc public enum EventTag : Swift.Int {
+  case PAGE_VIEW = 10
+  case CLICK = 20
+  case SCROLL = 30
+  case DOWNLOAD = 40
+  case OUT_LINK = 50
+  case SEARCH = 60
+  case ERROR = 70
+  case REFERRER = 80
+  case BACKGROUND = 90
+  case FOREGROUND = 100
+  case DEEPLINK = 110
+  case APP_PUSH = 120
+  public var description: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class StandardEventTag : ObjectiveC.NSObject {
+  @objc public static func toString(eventTag: TagWorks_SDK_iOS_v1.EventTag) -> Swift.String
+  @objc public static let PAGE_VIEW: Swift.String
+  @objc public static let CLICK: Swift.String
+  @objc public static let SCROLL: Swift.String
+  @objc public static let DOWNLOAD: Swift.String
+  @objc public static let OUT_LINK: Swift.String
+  @objc public static let SEARCH: Swift.String
+  @objc public static let ERROR: Swift.String
+  @objc public static let REFERRER: Swift.String
+  @objc public static let BACKGROUND: Swift.String
+  @objc public static let FOREGROUND: Swift.String
+  @objc public static let DEEPLINK: Swift.String
+  @objc public static let APP_PUSH: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension TagWorks_SDK_iOS_v1.TagWorks {
+  public static let CAMPAIGN_SCHEME: Swift.String
+  @objc public static let EVENT_TYPE_PAGE: Swift.String
+  @objc public static let EVENT_TYPE_USER_EVENT: Swift.String
+}
+@objc public enum InAppPopupType : Swift.Int {
+  case center = 1
+  case bottom = 2
+  case page = 3
+  case top = 4
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum InAppPopupButtonType : Swift.Int {
+  case none = 0
+  case close = 1
+  case closeAndNoMoreShow = 2
+  case closeAndNoShowToday = 3
+  case closeAndNoShowSeven = 4
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol Logger {
+  @objc func log(_ message: @autoclosure () -> Swift.String, with level: TagWorks_SDK_iOS_v1.LogLevel, file: Swift.String, function: Swift.String, line: Swift.Int)
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency final public class WebInterface : ObjectiveC.NSObject, WebKit.WKScriptMessageHandler {
+  @objc @_Concurrency.MainActor @preconcurrency final public let messageHandlerName: Swift.String
+  @objc @_Concurrency.MainActor @preconcurrency final public let omCmsPopupHandlerName: Swift.String
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
+  @objc @_Concurrency.MainActor @preconcurrency final public func getContentController() -> WebKit.WKUserContentController
+  @objc @_Concurrency.MainActor @preconcurrency final public func addTagworksWebInterface(_ contentController: WebKit.WKUserContentController)
+  @_Concurrency.MainActor @preconcurrency @objc final public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @objc @_Concurrency.MainActor @preconcurrency final public func webInterfaceDidReceiveDictionary(_ msgDictionary: Swift.Dictionary<Swift.String, Any>)
+  @objc @_Concurrency.MainActor @preconcurrency final public func webInterfaceDidReceiveOnCmsPopupDictionary(_ msgDictionary: Swift.Dictionary<Swift.String, Any>)
+  @objc deinit
+}
+final public class DefaultDispatcher : TagWorks_SDK_iOS_v1.Dispatcher {
+  final public let baseUrl: Foundation.URL?
+  final public var userAgent: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(serializer: any TagWorks_SDK_iOS_v1.Serializer, timeOut: Foundation.TimeInterval = 5.0, baseUrl: Foundation.URL, userAgent: Swift.String? = nil)
+  #endif
+  final public func send(events: [TagWorks_SDK_iOS_v1.Event], success: @escaping () -> Swift.Void, failure: @escaping (any Swift.Error) -> Swift.Void)
+  final public func send(localQueueEvents: Swift.String, success: @escaping () -> (), failure: @escaping (any Swift.Error) -> ())
+  @objc deinit
+}
+public enum Bit : Swift.Int {
+  case zero
+  case one
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol _UInt8Type {
+}
+extension Swift.UInt8 : TagWorks_SDK_iOS_v1._UInt8Type {
+}
+extension Swift.UInt8 {
+  public func bits() -> [TagWorks_SDK_iOS_v1.Bit]
+  public func bits() -> Swift.String
+}
+public struct OFB : TagWorks_SDK_iOS_v1.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: TagWorks_SDK_iOS_v1.OFB.Error, b: TagWorks_SDK_iOS_v1.OFB.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: TagWorks_SDK_iOS_v1.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock, encryptionOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock) throws -> any TagWorks_SDK_iOS_v1.CipherModeWorker
+}
+public typealias CipherOperationOnBlock = (_ block: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>?
+public protocol BlockMode {
+  var options: TagWorks_SDK_iOS_v1.BlockModeOption { get }
+  func worker(blockSize: Swift.Int, cipherOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock, encryptionOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock) throws -> any TagWorks_SDK_iOS_v1.CipherModeWorker
+}
+@_hasMissingDesignatedInitializers final public class AEADChaCha20Poly1305 : TagWorks_SDK_iOS_v1.AEAD {
+  public static let kLen: Swift.Int
+  public static var ivRange: Swift.Range<Swift.Int>
+  public static func encrypt(_ plainText: Swift.Array<Swift.UInt8>, key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>, authenticationHeader: Swift.Array<Swift.UInt8>) throws -> (cipherText: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>)
+  public static func decrypt(_ cipherText: Swift.Array<Swift.UInt8>, key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>, authenticationHeader: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>) throws -> (plainText: Swift.Array<Swift.UInt8>, success: Swift.Bool)
+  @objc deinit
+}
+public protocol Cryptor {
+  mutating func seek(to: Swift.Int) throws
+}
+public struct PCBC : TagWorks_SDK_iOS_v1.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: TagWorks_SDK_iOS_v1.PCBC.Error, b: TagWorks_SDK_iOS_v1.PCBC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: TagWorks_SDK_iOS_v1.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock, encryptionOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock) throws -> any TagWorks_SDK_iOS_v1.CipherModeWorker
+}
+public enum PKCS7 {
+}
+extension TagWorks_SDK_iOS_v1.AES : TagWorks_SDK_iOS_v1.Cryptors {
+  final public func makeEncryptor() throws -> any TagWorks_SDK_iOS_v1.Cryptor & TagWorks_SDK_iOS_v1.Updatable
+  final public func makeDecryptor() throws -> any TagWorks_SDK_iOS_v1.Cryptor & TagWorks_SDK_iOS_v1.Updatable
+}
+public protocol Authenticator {
+  func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class TagWorksPopup : ObjectiveC.NSObject {
+  @objc public static let sharedInstance: TagWorks_SDK_iOS_v1.TagWorksPopup
+  @objc final public func onCMSPopup(onCmsUrl: Swift.String, cust_id: Swift.String, rcmd_area_cd: Swift.String, owner: UIKit.UIViewController)
+  @objc final public func onCMSPopup(onCmsUrl: Swift.String, cntn_id: Swift.String, cust_id: Swift.String, rcmd_area_cd: Swift.String, owner: UIKit.UIViewController)
+  @objc final public func onCMSPopupBanner(onCmsUrl: Swift.String, cust_id: Swift.String, rcmd_area_cd: Swift.String, bannerView: UIKit.UIView, defaultPngImageName: Swift.String)
+  @objc final public func setWebViewDefaultContents(webView: WebKit.WKWebView, pngImageName: Swift.String)
+  @objc final public func presentDetailWebViewcontroller(loadUrl: Swift.String, owner: UIKit.UIViewController)
+  @objc final public func pushDetailWebViewcontroller(loadUrl: Swift.String, owner: UIKit.UINavigationController)
+  final public func onCMSPopupTest(onCmsUrl: Swift.String, cust_id: Swift.String, rcmd_area_cd: Swift.String, _ owner: UIKit.UIViewController)
+  @objc deinit
+}
+@available(iOS 13.0, *)
+extension UIKit.UIWindowScene {
+  @_Concurrency.MainActor @preconcurrency public static func swizzleAllSceneDelegates()
+}
+public struct CBC : TagWorks_SDK_iOS_v1.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: TagWorks_SDK_iOS_v1.CBC.Error, b: TagWorks_SDK_iOS_v1.CBC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: TagWorks_SDK_iOS_v1.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock, encryptionOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock) throws -> any TagWorks_SDK_iOS_v1.CipherModeWorker
+}
+final public class Rabbit {
+  public enum Error : Swift.Error {
+    case invalidKeyOrInitializationVector
+    public static func == (a: TagWorks_SDK_iOS_v1.Rabbit.Error, b: TagWorks_SDK_iOS_v1.Rabbit.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let ivSize: Swift.Int
+  public static let keySize: Swift.Int
+  public static let blockSize: Swift.Int
+  final public var keySize: Swift.Int {
+    get
+  }
+  convenience public init(key: Swift.Array<Swift.UInt8>) throws
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>?) throws
+  #endif
+  @objc deinit
+}
+extension TagWorks_SDK_iOS_v1.Rabbit : TagWorks_SDK_iOS_v1.Cipher {
+  final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+public struct HKDF {
+  public enum Error : Swift.Error {
+    case invalidInput
+    case derivedKeyTooLong
+    public static func == (a: TagWorks_SDK_iOS_v1.HKDF.Error, b: TagWorks_SDK_iOS_v1.HKDF.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>? = nil, info: Swift.Array<Swift.UInt8>? = nil, keyLength: Swift.Int? = nil, variant: TagWorks_SDK_iOS_v1.HMAC.Variant = .sha256) throws
+  #endif
+  public func calculate() throws -> Swift.Array<Swift.UInt8>
+}
+public enum CipherError : Swift.Error {
+  case encrypt
+  case decrypt
+  public static func == (a: TagWorks_SDK_iOS_v1.CipherError, b: TagWorks_SDK_iOS_v1.CipherError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Cipher : AnyObject {
+  var keySize: Swift.Int { get }
+  func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func encrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func decrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+extension TagWorks_SDK_iOS_v1.Cipher {
+  public func encrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public func decrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+extension Swift.String {
+  public func decryptBase64ToString(cipher: any TagWorks_SDK_iOS_v1.Cipher) throws -> Swift.String
+  public func decryptBase64(cipher: any TagWorks_SDK_iOS_v1.Cipher) throws -> Swift.Array<Swift.UInt8>
+}
+public protocol Cryptors : AnyObject {
+  func makeEncryptor() throws -> any TagWorks_SDK_iOS_v1.Cryptor & TagWorks_SDK_iOS_v1.Updatable
+  func makeDecryptor() throws -> any TagWorks_SDK_iOS_v1.Cryptor & TagWorks_SDK_iOS_v1.Updatable
+  static func randomIV(_ blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+}
+extension TagWorks_SDK_iOS_v1.Cryptors {
+  public static func randomIV(_ count: Swift.Int) -> Swift.Array<Swift.UInt8>
+}
+extension Swift.String {
+  public var bytes: Swift.Array<Swift.UInt8> {
+    get
+  }
+  public func md5() -> Swift.String
+  public func sha1() -> Swift.String
+  public func sha224() -> Swift.String
+  public func sha256() -> Swift.String
+  public func sha384() -> Swift.String
+  public func sha512() -> Swift.String
+  public func sha3(_ variant: TagWorks_SDK_iOS_v1.SHA3.Variant) -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func crc16(seed: Swift.UInt16? = nil) -> Swift.String
+  #endif
+  public func encrypt(cipher: any TagWorks_SDK_iOS_v1.Cipher) throws -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func encryptToBase64(cipher: any TagWorks_SDK_iOS_v1.Cipher) throws -> Swift.String?
+  #endif
+  public func authenticate<A>(with authenticator: A) throws -> Swift.String where A : TagWorks_SDK_iOS_v1.Authenticator
+}
+extension TagWorks_SDK_iOS_v1.ChaCha20 {
+  convenience public init(key: Swift.String, iv: Swift.String) throws
+}
+@_inheritsConvenienceInitializers final public class CBCMAC : TagWorks_SDK_iOS_v1.CMAC {
+  override final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  override public init(key: Swift.Array<Swift.UInt8>) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SwizzlingManager {
+  public static let sharedInstance: TagWorks_SDK_iOS_v1.SwizzlingManager
+  final public func lifecycleTracking()
+  @objc deinit
+}
+public protocol Updatable {
+  mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool) throws -> Swift.Array<Swift.UInt8>
+  mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+}
+extension TagWorks_SDK_iOS_v1.Updatable {
+  public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+  public mutating func update(withBytes bytes: Swift.Array<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+  public mutating func update(withBytes bytes: Swift.Array<Swift.UInt8>, isLast: Swift.Bool = false, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func finish(withBytes bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public mutating func finish(withBytes bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public mutating func finish() throws -> Swift.Array<Swift.UInt8>
+  public mutating func finish(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func finish(withBytes bytes: Swift.Array<Swift.UInt8>, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func finish(output: (Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class FingerprintManager : ObjectiveC.NSObject, WebKit.WKNavigationDelegate, WebKit.WKScriptMessageHandler {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
+  public struct FingerprintResult {
+    public var requiredHash: Swift.String?
+    public var userAgent: Swift.String?
+    public var canvasHash: Swift.String?
+    public var webGLHash: Swift.String?
+    public var audioHash: Swift.String?
+  }
+  @_Concurrency.MainActor @preconcurrency public func getScriptFingerprint(completion: @escaping (TagWorks_SDK_iOS_v1.FingerprintManager.FingerprintResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  #endif
+  @_Concurrency.MainActor @preconcurrency @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor @preconcurrency public class WebViewManager : ObjectiveC.NSObject, WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor @preconcurrency public init(webView: WebKit.WKWebView)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WebKit.WKNavigation!)
+  #endif
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationResponse: WebKit.WKNavigationResponse, decisionHandler: @escaping (WebKit.WKNavigationResponsePolicy) -> Swift.Void)
+  @objc deinit
+}
+final public class OCB : TagWorks_SDK_iOS_v1.BlockMode {
+  public enum Mode {
+    case combined
+    case detached
+    public static func == (a: TagWorks_SDK_iOS_v1.OCB.Mode, b: TagWorks_SDK_iOS_v1.OCB.Mode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let options: TagWorks_SDK_iOS_v1.BlockModeOption
+  public enum Error : Swift.Error {
+    case invalidNonce
+    case fail
+    public static func == (a: TagWorks_SDK_iOS_v1.OCB.Error, b: TagWorks_SDK_iOS_v1.OCB.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public var authenticationTag: Swift.Array<Swift.UInt8>?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(nonce N: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: TagWorks_SDK_iOS_v1.OCB.Mode = .detached)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  convenience public init(nonce N: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: TagWorks_SDK_iOS_v1.OCB.Mode = .detached)
+  #endif
+  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock, encryptionOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock) throws -> any TagWorks_SDK_iOS_v1.CipherModeWorker
+  @objc deinit
+}
+public struct BlockModeOption : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public typealias ArrayLiteralElement = TagWorks_SDK_iOS_v1.BlockModeOption
+  public typealias Element = TagWorks_SDK_iOS_v1.BlockModeOption
+  public typealias RawValue = Swift.Int
+}
+extension Foundation.Data {
+  public func checksum() -> Swift.UInt16
+  public func md5() -> Foundation.Data
+  public func sha1() -> Foundation.Data
+  public func sha224() -> Foundation.Data
+  public func sha256() -> Foundation.Data
+  public func sha384() -> Foundation.Data
+  public func sha512() -> Foundation.Data
+  public func sha3(_ variant: TagWorks_SDK_iOS_v1.SHA3.Variant) -> Foundation.Data
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Foundation.Data
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Foundation.Data
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func crc16(seed: Swift.UInt16? = nil) -> Foundation.Data
+  #endif
+  public func encrypt(cipher: any TagWorks_SDK_iOS_v1.Cipher) throws -> Foundation.Data
+  public func decrypt(cipher: any TagWorks_SDK_iOS_v1.Cipher) throws -> Foundation.Data
+  public func authenticate(with authenticator: any TagWorks_SDK_iOS_v1.Authenticator) throws -> Foundation.Data
+}
+extension Foundation.Data {
+  public init(hex: Swift.String)
+  public var bytes: Swift.Array<Swift.UInt8> {
+    get
+  }
+  public func toHexString() -> Swift.String
+}
+extension TagWorks_SDK_iOS_v1.AES {
+  convenience public init(key: Swift.String, iv: Swift.String, padding: TagWorks_SDK_iOS_v1.Padding = .pkcs7) throws
+}
+public struct ECB : TagWorks_SDK_iOS_v1.BlockMode {
+  public let options: TagWorks_SDK_iOS_v1.BlockModeOption
+  public init()
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock, encryptionOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock) throws -> any TagWorks_SDK_iOS_v1.CipherModeWorker
+}
+extension TagWorks_SDK_iOS_v1.PKCS5 {
+  public struct PBKDF1 {
+    public enum Error : Swift.Error {
+      case invalidInput
+      case derivedKeyTooLong
+      public static func == (a: TagWorks_SDK_iOS_v1.PKCS5.PBKDF1.Error, b: TagWorks_SDK_iOS_v1.PKCS5.PBKDF1.Error) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public enum Variant {
+      case md5, sha1
+      public static func == (a: TagWorks_SDK_iOS_v1.PKCS5.PBKDF1.Variant, b: TagWorks_SDK_iOS_v1.PKCS5.PBKDF1.Variant) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, variant: TagWorks_SDK_iOS_v1.PKCS5.PBKDF1.Variant = .sha1, iterations: Swift.Int = 4096, keyLength: Swift.Int? = nil) throws
+    #endif
+    public func calculate() -> Swift.Array<Swift.UInt8>
+  }
+}
+final public class AES {
+  public enum Error : Swift.Error {
+    case invalidKeySize
+    case dataPaddingRequired
+    case invalidData
+    public static func == (a: TagWorks_SDK_iOS_v1.AES.Error, b: TagWorks_SDK_iOS_v1.AES.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Variant : Swift.Int {
+    case aes128, aes192, aes256
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  final public let variant: TagWorks_SDK_iOS_v1.AES.Variant
+  public init(key: Swift.Array<Swift.UInt8>, blockMode: any TagWorks_SDK_iOS_v1.BlockMode, padding: TagWorks_SDK_iOS_v1.Padding = .pkcs7) throws
+  @objc deinit
+}
+extension TagWorks_SDK_iOS_v1.AES : TagWorks_SDK_iOS_v1.Cipher {
+  final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+@_hasMissingDesignatedInitializers final public class Checksum {
+  @objc deinit
+}
+extension TagWorks_SDK_iOS_v1.Checksum {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func crc32(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func crc32c(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func crc16(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt16? = nil) -> Swift.UInt16
+  #endif
+}
+final public class SHA3 {
+  final public let blockSize: Swift.Int
+  final public let digestLength: Swift.Int
+  final public let markByte: Swift.UInt8
+  public enum Variant {
+    case sha224, sha256, sha384, sha512, keccak224, keccak256, keccak384, keccak512
+    public var outputLength: Swift.Int {
+      get
+    }
+    public static func == (a: TagWorks_SDK_iOS_v1.SHA3.Variant, b: TagWorks_SDK_iOS_v1.SHA3.Variant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(variant: TagWorks_SDK_iOS_v1.SHA3.Variant)
+  final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension TagWorks_SDK_iOS_v1.SHA3 : TagWorks_SDK_iOS_v1.Updatable {
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+}
+extension TagWorks_SDK_iOS_v1.Rabbit {
+  convenience public init(key: Swift.String) throws
+  convenience public init(key: Swift.String, iv: Swift.String) throws
+}
+final public class SHA1 {
+  public init()
+  final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension TagWorks_SDK_iOS_v1.SHA1 : TagWorks_SDK_iOS_v1.Updatable {
+  @discardableResult
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+}
+public enum PKCS5 {
+}
+extension Swift.Array where Element == Swift.UInt8 {
+  public init(hex: Swift.String)
+  public func toHexString() -> Swift.String
+}
+extension Swift.Array where Element == Swift.UInt8 {
+  @available(*, deprecated)
+  public func chunks(size chunksize: Swift.Int) -> Swift.Array<Swift.Array<Element>>
+  public func md5() -> [Element]
+  public func sha1() -> [Element]
+  public func sha224() -> [Element]
+  public func sha256() -> [Element]
+  public func sha384() -> [Element]
+  public func sha512() -> [Element]
+  public func sha2(_ variant: TagWorks_SDK_iOS_v1.SHA2.Variant) -> [Element]
+  public func sha3(_ variant: TagWorks_SDK_iOS_v1.SHA3.Variant) -> [Element]
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func crc16(seed: Swift.UInt16? = nil) -> Swift.UInt16
+  #endif
+  public func encrypt(cipher: any TagWorks_SDK_iOS_v1.Cipher) throws -> [Element]
+  public func decrypt(cipher: any TagWorks_SDK_iOS_v1.Cipher) throws -> [Element]
+  public func authenticate<A>(with authenticator: A) throws -> [Element] where A : TagWorks_SDK_iOS_v1.Authenticator
+}
+public class CMAC : TagWorks_SDK_iOS_v1.Authenticator {
+  public enum Error : Swift.Error {
+    case wrongKeyLength
+    public static func == (a: TagWorks_SDK_iOS_v1.CMAC.Error, b: TagWorks_SDK_iOS_v1.CMAC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(key: Swift.Array<Swift.UInt8>) throws
+  public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public func authenticate(_ bytes: Swift.Array<Swift.UInt8>, cipher: any TagWorks_SDK_iOS_v1.Cipher) throws -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+public protocol PaddingProtocol {
+  func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+  #if compiler(>=5.3) && $NonescapableTypes
+  func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
+  #endif
+}
+public enum Padding : TagWorks_SDK_iOS_v1.PaddingProtocol {
+  case noPadding, zeroPadding, pkcs7, pkcs5, iso78164
+  public func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
+  #endif
+  public static func == (a: TagWorks_SDK_iOS_v1.Padding, b: TagWorks_SDK_iOS_v1.Padding) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIApplication {
+  @_Concurrency.MainActor @preconcurrency public static func swizzleAppDelegate()
+}
+public struct CFB : TagWorks_SDK_iOS_v1.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: TagWorks_SDK_iOS_v1.CFB.Error, b: TagWorks_SDK_iOS_v1.CFB.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: TagWorks_SDK_iOS_v1.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock, encryptionOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock) throws -> any TagWorks_SDK_iOS_v1.CipherModeWorker
+}
+final public class MD5 {
+  public init()
+  final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension TagWorks_SDK_iOS_v1.MD5 : TagWorks_SDK_iOS_v1.Updatable {
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+}
+extension Swift.Array where Element == Swift.UInt8 {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func toBase64() -> Swift.String?
+  #endif
+  public init(base64: Swift.String)
+}
+final public class ChaCha20 {
+  public enum Error : Swift.Error {
+    case invalidKeyOrInitializationVector
+    case notSupported
+    public static func == (a: TagWorks_SDK_iOS_v1.ChaCha20.Error, b: TagWorks_SDK_iOS_v1.ChaCha20.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  public init(key: Swift.Array<Swift.UInt8>, iv nonce: Swift.Array<Swift.UInt8>) throws
+  @objc deinit
+}
+extension TagWorks_SDK_iOS_v1.ChaCha20 : TagWorks_SDK_iOS_v1.Cipher {
+  final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+extension TagWorks_SDK_iOS_v1.ChaCha20 {
+  public struct ChaChaEncryptor : TagWorks_SDK_iOS_v1.Cryptor, TagWorks_SDK_iOS_v1.Updatable {
+    public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+    public func seek(to: Swift.Int) throws
+  }
+}
+extension TagWorks_SDK_iOS_v1.ChaCha20 {
+  public struct ChaChaDecryptor : TagWorks_SDK_iOS_v1.Cryptor, TagWorks_SDK_iOS_v1.Updatable {
+    public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = true) throws -> Swift.Array<Swift.UInt8>
+    public func seek(to: Swift.Int) throws
+  }
+}
+extension TagWorks_SDK_iOS_v1.ChaCha20 : TagWorks_SDK_iOS_v1.Cryptors {
+  final public func makeEncryptor() -> any TagWorks_SDK_iOS_v1.Cryptor & TagWorks_SDK_iOS_v1.Updatable
+  final public func makeDecryptor() -> any TagWorks_SDK_iOS_v1.Cryptor & TagWorks_SDK_iOS_v1.Updatable
+}
+final public class SHA2 {
+  public enum Variant : Swift.RawRepresentable {
+    case sha224, sha256, sha384, sha512
+    public var digestLength: Swift.Int {
+      get
+    }
+    public var blockSize: Swift.Int {
+      get
+    }
+    public typealias RawValue = Swift.Int
+    public var rawValue: TagWorks_SDK_iOS_v1.SHA2.Variant.RawValue {
+      get
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: TagWorks_SDK_iOS_v1.SHA2.Variant.RawValue)
+    #endif
+  }
+  public init(variant: TagWorks_SDK_iOS_v1.SHA2.Variant)
+  final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension TagWorks_SDK_iOS_v1.SHA2 : TagWorks_SDK_iOS_v1.Updatable {
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+}
+public struct CTR {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: TagWorks_SDK_iOS_v1.CTR.Error, b: TagWorks_SDK_iOS_v1.CTR.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: TagWorks_SDK_iOS_v1.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>, counter: Swift.Int = 0)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock, encryptionOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock) throws -> any TagWorks_SDK_iOS_v1.CipherModeWorker
+}
+final public class GCM : TagWorks_SDK_iOS_v1.BlockMode {
+  public enum Mode {
+    case combined
+    case detached
+    public static func == (a: TagWorks_SDK_iOS_v1.GCM.Mode, b: TagWorks_SDK_iOS_v1.GCM.Mode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let options: TagWorks_SDK_iOS_v1.BlockModeOption
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    case fail
+    public static func == (a: TagWorks_SDK_iOS_v1.GCM.Error, b: TagWorks_SDK_iOS_v1.GCM.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public var authenticationTag: Swift.Array<Swift.UInt8>?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(iv: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: TagWorks_SDK_iOS_v1.GCM.Mode = .detached)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  convenience public init(iv: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: TagWorks_SDK_iOS_v1.GCM.Mode = .detached)
+  #endif
+  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock, encryptionOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock) throws -> any TagWorks_SDK_iOS_v1.CipherModeWorker
+  @objc deinit
+}
+final public class Blowfish {
+  public enum Error : Swift.Error {
+    case dataPaddingRequired
+    case invalidKeyOrInitializationVector
+    case invalidInitializationVector
+    case invalidBlockMode
+    public static func == (a: TagWorks_SDK_iOS_v1.Blowfish.Error, b: TagWorks_SDK_iOS_v1.Blowfish.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  public init(key: Swift.Array<Swift.UInt8>, blockMode: any TagWorks_SDK_iOS_v1.BlockMode = CBC(iv: Array<UInt8>(repeating: 0, count: Blowfish.blockSize)), padding: TagWorks_SDK_iOS_v1.Padding) throws
+  @objc deinit
+}
+extension TagWorks_SDK_iOS_v1.Blowfish : TagWorks_SDK_iOS_v1.Cipher {
+  final public func encrypt<C>(_ bytes: C) throws -> Swift.Array<Swift.UInt8> where C : Swift.Collection, C.Element == Swift.UInt8, C.Index == Swift.Int
+  final public func decrypt<C>(_ bytes: C) throws -> Swift.Array<Swift.UInt8> where C : Swift.Collection, C.Element == Swift.UInt8, C.Index == Swift.Int
+}
+public protocol CipherModeWorker {
+  var cipherOperation: TagWorks_SDK_iOS_v1.CipherOperationOnBlock { get }
+  var additionalBufferSize: Swift.Int { get }
+  mutating func encrypt(block plaintext: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  mutating func decrypt(block ciphertext: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+}
+public protocol BlockModeWorker : TagWorks_SDK_iOS_v1.CipherModeWorker {
+  var blockSize: Swift.Int { get }
+}
+public protocol CounterModeWorker : TagWorks_SDK_iOS_v1.CipherModeWorker {
+  associatedtype Counter
+  var counter: Self.Counter { get set }
+}
+public protocol SeekableModeWorker : TagWorks_SDK_iOS_v1.CipherModeWorker {
+  mutating func seek(to position: Swift.Int) throws
+}
+public protocol StreamModeWorker : TagWorks_SDK_iOS_v1.CipherModeWorker {
+}
+public protocol FinalizingEncryptModeWorker : TagWorks_SDK_iOS_v1.CipherModeWorker {
+  mutating func finalize(encrypt ciphertext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+}
+public protocol FinalizingDecryptModeWorker : TagWorks_SDK_iOS_v1.CipherModeWorker {
+  @discardableResult
+  mutating func willDecryptLast(bytes ciphertext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+  mutating func didDecryptLast(bytes plaintext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+  mutating func finalize(decrypt plaintext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+}
+extension TagWorks_SDK_iOS_v1.Blowfish {
+  convenience public init(key: Swift.String, iv: Swift.String, padding: TagWorks_SDK_iOS_v1.Padding = .pkcs7) throws
+}
+extension TagWorks_SDK_iOS_v1.HMAC {
+  convenience public init(key: Swift.String, variant: TagWorks_SDK_iOS_v1.HMAC.Variant = .md5) throws
+}
+final public class HMAC : TagWorks_SDK_iOS_v1.Authenticator {
+  public enum Error : Swift.Error {
+    case authenticateError
+    case invalidInput
+    public static func == (a: TagWorks_SDK_iOS_v1.HMAC.Error, b: TagWorks_SDK_iOS_v1.HMAC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Variant {
+    case sha1, sha256, sha384, sha512, md5
+    public static func == (a: TagWorks_SDK_iOS_v1.HMAC.Variant, b: TagWorks_SDK_iOS_v1.HMAC.Variant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(key: Swift.Array<Swift.UInt8>, variant: TagWorks_SDK_iOS_v1.HMAC.Variant = .md5)
+  final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+public protocol AEAD {
+  static var kLen: Swift.Int { get }
+  static var ivRange: Swift.Range<Swift.Int> { get }
+}
+public struct CCM {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    case invalidParameter
+    case fail
+    public static func == (a: TagWorks_SDK_iOS_v1.CCM.Error, b: TagWorks_SDK_iOS_v1.CCM.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: TagWorks_SDK_iOS_v1.BlockModeOption
+  public var authenticationTag: Swift.Array<Swift.UInt8>?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(iv: Swift.Array<Swift.UInt8>, tagLength: Swift.Int, messageLength: Swift.Int, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(iv: Swift.Array<Swift.UInt8>, tagLength: Swift.Int, messageLength: Swift.Int, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil)
+  #endif
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock, encryptionOperation: @escaping TagWorks_SDK_iOS_v1.CipherOperationOnBlock) throws -> any TagWorks_SDK_iOS_v1.CipherModeWorker
+}
+final public class Scrypt {
+  public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, dkLen: Swift.Int, N: Swift.Int, r: Swift.Int, p: Swift.Int) throws
+  final public func calculate() throws -> [Swift.UInt8]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class BlockDecryptor : TagWorks_SDK_iOS_v1.Cryptor, TagWorks_SDK_iOS_v1.Updatable {
+  public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+  public func seek(to position: Swift.Int) throws
+  @objc deinit
+}
+final public class Poly1305 : TagWorks_SDK_iOS_v1.Authenticator {
+  public enum Error : Swift.Error {
+    case authenticateError
+    public static func == (a: TagWorks_SDK_iOS_v1.Poly1305.Error, b: TagWorks_SDK_iOS_v1.Poly1305.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  public init(key: Swift.Array<Swift.UInt8>)
+  final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+@available(*, renamed: "Digest")
+public typealias Hash = TagWorks_SDK_iOS_v1.Digest
+public struct Digest {
+  public static func md5(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha1(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha224(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha256(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha384(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha512(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha2(_ bytes: Swift.Array<Swift.UInt8>, variant: TagWorks_SDK_iOS_v1.SHA2.Variant) -> Swift.Array<Swift.UInt8>
+  public static func sha3(_ bytes: Swift.Array<Swift.UInt8>, variant: TagWorks_SDK_iOS_v1.SHA3.Variant) -> Swift.Array<Swift.UInt8>
+}
+extension TagWorks_SDK_iOS_v1.PKCS5 {
+  public struct PBKDF2 {
+    public enum Error : Swift.Error {
+      case invalidInput
+      case derivedKeyTooLong
+      public static func == (a: TagWorks_SDK_iOS_v1.PKCS5.PBKDF2.Error, b: TagWorks_SDK_iOS_v1.PKCS5.PBKDF2.Error) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, iterations: Swift.Int = 4096, keyLength: Swift.Int? = nil, variant: TagWorks_SDK_iOS_v1.HMAC.Variant = .sha256) throws
+    #endif
+    public func calculate() throws -> Swift.Array<Swift.UInt8>
+  }
+}
+public struct UserAgent {
+}
+public protocol Serializer {
+  func queryItems(for event: TagWorks_SDK_iOS_v1.Event) -> [Swift.String : Swift.String]
+  func toJsonData(for events: [TagWorks_SDK_iOS_v1.Event], isLocalQueue: Swift.Bool) throws -> Foundation.Data
+}
+@_hasMissingDesignatedInitializers final public class CommonUtil {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getSDKVersion() -> Swift.String?
+  #endif
+  public static func calculateHeight(for size: CoreFoundation.CGSize) -> CoreFoundation.CGFloat
+  public static func getAllIPAddresses() -> [Swift.String : Swift.String]
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getIPAddressForCurrentInterface() -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getWiFiIPv4Address() -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getCellularIPv4Address() -> Swift.String?
+  #endif
+  public static func getCurrentTimeZone() -> Swift.String
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class UserAgentFetcher : ObjectiveC.NSObject, WebKit.WKNavigationDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func getUserAgent(completion: @escaping (Swift.String?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  #endif
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
+  @objc deinit
+}
+extension Foundation.Locale {
+  public static var httpAcceptLanguage: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class AES256Util {
+  public static func decrypt(encoded: Swift.String) -> Swift.String
+  @objc deinit
+}
+@objc final public class DefaultLogger : ObjectiveC.NSObject, TagWorks_SDK_iOS_v1.Logger {
+  @objc public init(minLevel: TagWorks_SDK_iOS_v1.LogLevel)
+  @objc final public func log(_ message: @autoclosure () -> Swift.String, with level: TagWorks_SDK_iOS_v1.LogLevel, file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class DisabledLogger : TagWorks_SDK_iOS_v1.Logger {
+  @objc final public func log(_ message: @autoclosure () -> Swift.String, with level: TagWorks_SDK_iOS_v1.LogLevel, file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class DeeplinkManager : ObjectiveC.NSObject {
+  @objc public static let sharedInstance: TagWorks_SDK_iOS_v1.DeeplinkManager
+  public var isDeeplinkOpened: Swift.Bool
+  public var isDeferredDeeplinkOpened: Swift.Bool
+  public var isFirstInstall: Swift.Bool
+  public var isReinstall: Swift.Bool
+  @objc deinit
+}
+@objc final public class Dimension : ObjectiveC.NSObject, Swift.Codable {
+  @objc public enum DimensionType : Swift.Int {
+    case indexed = 0
+    case dynamic = 1
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc final public let index: Swift.Int
+  @objc final public let key: Swift.String
+  @objc final public let value: Swift.String
+  @objc final public let numValue: Swift.Double
+  @objc final public var type: Swift.Int
+  public init(from decoder: any Swift.Decoder) throws
+  @objc public init(WithType type: Swift.Int = generalType, index: Swift.Int, stringValue: Swift.String, numValue: Swift.Double = 0)
+  @objc public init(index: Swift.Int, stringValue: Swift.String)
+  @objc public init(index: Swift.Int, value: Swift.String)
+  @objc public init(index: Swift.Int, numValue: Swift.Double = 0)
+  @objc public init(key: Swift.String, value: Swift.String)
+  @objc public init(key: Swift.String, numValue: Swift.Double)
+  @objc deinit
+  final public func encode(to encoder: any Swift.Encoder) throws
+}
+extension TagWorks_SDK_iOS_v1.Dimension {
+  @objc public static let generalType: Swift.Int
+  @objc public static let factType: Swift.Int
+}
+public protocol Dispatcher {
+  #if compiler(>=5.3) && $NonescapableTypes
+  var baseUrl: Foundation.URL? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  var userAgent: Swift.String? { get }
+  #endif
+  func send(events: [TagWorks_SDK_iOS_v1.Event], success: @escaping () -> (), failure: @escaping (_ error: any Swift.Error) -> ())
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class WebPopupViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public var backgroundAlpha: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var isPopupAnimating: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public var displayDelayDate: Swift.String? {
+    get
+    set
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public var displayShowDate: Swift.String? {
+    get
+    set
+  }
+  #endif
+  @_Concurrency.MainActor @preconcurrency public init(cust_id: Swift.String, rcmd_area_cd: Swift.String, requestUrl: Swift.String, jsonData: Any)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public func isShowCheckDisplayDelay() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func isShowCheckDisplayShow() -> Swift.Bool
+  @objc deinit
+}
+@available(iOS 13.0.0, *)
+extension TagWorks_SDK_iOS_v1.WebPopupViewController : WebKit.WKUIDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo) async
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+}
+public struct DeviceInfo {
+  public let devicePlatform: Swift.String
+  public let deviceModelName: Swift.String
+  public let deviceOperatingSystem: Swift.String
+  public let deviceOperatingSystemVersion: Swift.String
+  public let deviceScreenSize: CoreFoundation.CGSize
+  public let deviceNativeScreenSize: CoreFoundation.CGSize
+  public let deviceDarwinVersion: Swift.String?
+  public let deviceLanguage: Swift.String?
+  public let deviceName: Swift.String?
+  public static func getDeviceInfo() -> TagWorks_SDK_iOS_v1.DeviceInfo
+}
+extension TagWorks_SDK_iOS_v1.DeviceInfo {
+  public static func getDeviceScreenResolution() -> CoreFoundation.CGSize
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getDevicePreferredLanguage() -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getDeviceResionLanguage() -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func getDeviceName() -> Swift.String?
+  #endif
+}
+public struct Event : Swift.Codable {
+  public let uuid: Foundation.UUID
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension TagWorks_SDK_iOS_v1.Event {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(tagWorks: TagWorks_SDK_iOS_v1.TagWorks, url: Foundation.URL? = nil, urlReferer: Foundation.URL? = nil, eventType: Swift.String, pageTitle: Swift.String? = nil, searchKeyword: Swift.String? = nil, customUserPath: Swift.String? = nil, dimensions: [TagWorks_SDK_iOS_v1.Dimension] = [], eventCategory: Swift.String? = nil, siteId: Swift.String? = nil, errorMsg: Swift.String? = nil, inflow: Swift.String? = nil, errorType: Swift.String? = nil, errorData: Swift.String? = nil, errorTime: Swift.String? = nil, evtPlatform: Swift.String = "1", isDeepLink: Swift.String? = nil, isDeferredDeepLink: Swift.String? = nil, deeplinkId: Swift.String? = nil, isFirstInstall: Swift.String? = nil, isReinstall: Swift.String? = nil, campaignId: Swift.String? = nil, refChannel: Swift.String? = nil, landingPageUrl: Swift.String? = nil, pushToken: Swift.String? = nil)
+  #endif
+}
+@_hasMissingDesignatedInitializers final public class CrashLogManager {
+  public static let sharedInstance: TagWorks_SDK_iOS_v1.CrashLogManager
+  @objc deinit
+}
+public protocol Queue {
+  var size: Swift.Int { get }
+  #if compiler(>=5.3) && $NonescapableTypes
+  mutating func enqueue(events: [TagWorks_SDK_iOS_v1.Event], completion: (() -> Swift.Void)?)
+  #endif
+  mutating func enqueue(events: [TagWorks_SDK_iOS_v1.Event], completion: @escaping (_ newSize: Swift.Int) -> Swift.Void)
+  mutating func remove(events: [TagWorks_SDK_iOS_v1.Event], completion: @escaping () -> Swift.Void)
+  func first(limit: Swift.Int, completion: @escaping (_ items: [TagWorks_SDK_iOS_v1.Event]) -> Swift.Void)
+}
+extension Foundation.NSNotification.Name {
+  public static let logUpdated: Foundation.Notification.Name
+}
+@objc public enum LogLevel : Swift.Int {
+  case verbose = 10
+  case debug = 20
+  case info = 30
+  case warning = 40
+  case error = 50
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class TagWorks : ObjectiveC.NSObject {
+  @objc public static let sharedInstance: TagWorks_SDK_iOS_v1.TagWorks
+  @objc final public var logger: any TagWorks_SDK_iOS_v1.Logger
+  @objc final public var visitorId: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc final public var userId: Swift.String?
+  @objc final public var isOptedOut: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc final public var appVersion: Swift.String?
+  @objc final public var appName: Swift.String?
+  @objc final public var isEnabledAdId: Swift.Bool
+  @objc final public var adId: Swift.String?
+  @objc final public func setAdid(_ uuid: Swift.String)
+  @objc final public var pushToken: Swift.String?
+  @objc final public func setDevicePushToken(_ token: Swift.String)
+  @objc final public var contentUrl: Foundation.URL?
+  @objc final public var currentContentUrlPath: Foundation.URL?
+  @objc final public var isDebugLogPrint: Swift.Bool
+  @objc final public var isDebugLogPost: Swift.Bool
+  @objc final public var isManualDispatch: Swift.Bool
+  @objc final public var isUseDynamicParameter: Swift.Bool
+  @objc final public let webViewInterface: TagWorks_SDK_iOS_v1.WebInterface
+  @objc final public var isDispatchRetry: Swift.Bool
+  @objc final public var localQueueEnabled: Swift.Bool
+  @objc final public var errorReportEnabled: Swift.Bool
+  @objc final public var autoTrackingPage: Swift.Bool
+  @objc final public var autoTrackingButtonClick: Swift.Bool
+  @objc final public var autoTrackingApplication: Swift.Bool
+  @objc final public var autoTrackingScene: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func setInstanceConfig(siteId: Swift.String, baseUrl: Foundation.URL, isUseIntervals: Swift.Bool, dispatchInterval: Foundation.TimeInterval = 3.0, userAgent: Swift.String? = nil, appVersion: Swift.String? = nil, appName: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func setInstanceConfig(siteId: Swift.String, baseUrl: Foundation.URL, isUseIntervals: Swift.Bool, dispatchInterval: Foundation.TimeInterval = 3.0, sessionTimeOut: Foundation.TimeInterval = 5.0, userAgent: Swift.String? = nil, appVersion: Swift.String? = nil, appName: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func setInstanceConfig(siteId: Swift.String, baseUrl: Foundation.URL, isUseIntervals: Swift.Bool, dispatchInterval: Foundation.TimeInterval = 3.0, sessionTimeOut: Foundation.TimeInterval = 5.0, userAgent: Swift.String? = nil, isManualDispatch: Swift.Bool = false, appVersion: Swift.String? = nil, appName: Swift.String? = nil, isUseDynamicParameter: Swift.Bool = true, isEnabledAdId: Swift.Bool = false)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func setInstanceConfig(siteId: Swift.String, baseUrl: Foundation.URL, isUseIntervals: Swift.Bool, dispatchIntervalWithSeconds: Foundation.TimeInterval = 3.0, sessionTimeOutWithSeconds: Foundation.TimeInterval = 5.0, userAgent: Swift.String? = nil, isManualDispatch: Swift.Bool = false, appVersion: Swift.String? = nil, appName: Swift.String? = nil, isUseDynamicParameter: Swift.Bool = true, isEnabledAdId: Swift.Bool = false, deeplinkServerUrl: Foundation.URL? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func setInstanceConfig(siteId: Swift.String, baseUrl: Foundation.URL, isUseIntervals: Swift.Bool, dispatchIntervalWithSeconds: Foundation.TimeInterval = 3.0, sessionTimeOutWithSeconds: Foundation.TimeInterval = 5.0, isManualDispatch: Swift.Bool = false, appVersion: Swift.String? = nil, appName: Swift.String? = nil, isUseDynamicParameter: Swift.Bool = true, isEnabledAdId: Swift.Bool = false, deeplinkServerUrl: Foundation.URL? = nil)
+  #endif
+  @objc final public func setManualDispatch(_ isManual: Swift.Bool)
+  @objc final public func clearUserId()
+  @objc final public func excludeAutoTrackingPages(_ pageClasses: [Swift.AnyClass])
+  @objc final public func registerButtons(_ buttons: [UIKit.UIButton])
+  final public func removeAllRegisterButtons()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func launchWithOptions(url: Foundation.URL?, userInfo: [Swift.AnyHashable : Any]?)
+  #endif
+  @objc final public func registerDeeplinkCallback(_ callback: @escaping @convention(block) (Swift.Bool, Foundation.URL) -> Swift.Void)
+  @objc final public func dispatch() -> Swift.Bool
+  @objc deinit
+}
+extension TagWorks_SDK_iOS_v1.TagWorks {
+  @objc final public func isInitialize() -> Swift.Bool
+  @objc final public func logEvent(_ type: Swift.String, bundle: TagWorks_SDK_iOS_v1.DataBundle) -> Swift.Bool
+}
+extension TagWorks_SDK_iOS_v1.TagWorks {
+  @objc final public func setCommonDimension(dimensions: [TagWorks_SDK_iOS_v1.Dimension])
+  @objc final public func setCommonDimensions(_ dimensions: [TagWorks_SDK_iOS_v1.Dimension])
+  @objc final public func setCommonDimension(dimension: TagWorks_SDK_iOS_v1.Dimension)
+  @objc final public func setCommonDimension(_ dimension: TagWorks_SDK_iOS_v1.Dimension)
+  @objc final public func setCommonDimension(index: Swift.Int, stringValue: Swift.String)
+  @objc final public func setCommonDimension(index: Swift.Int, value: Swift.String)
+  @objc final public func setCommonDimension(index: Swift.Int, numValue: Swift.Double)
+  @objc final public func setCommonDimension(type: Swift.Int, index: Swift.Int, stringValue: Swift.String, numValue: Swift.Double)
+  @objc final public func removeCommonDimension(WithType type: Swift.Int, index: Swift.Int)
+  @objc final public func removeCommonDimensionWithArrayIndex(_ index: Swift.Int)
+  @objc final public func removeAllCommonDimension()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func getCommonDimension(WithType type: Swift.Int, index: Swift.Int) -> TagWorks_SDK_iOS_v1.Dimension?
+  #endif
+  @objc final public func getCommonDimensions() -> [TagWorks_SDK_iOS_v1.Dimension]
+  @objc final public func setDynamicCommonDimension(dimensions: [TagWorks_SDK_iOS_v1.Dimension])
+  @objc final public func setDynamicCommonDimensions(_ dimensions: [TagWorks_SDK_iOS_v1.Dimension])
+  @objc final public func setDynamicCommonDimension(dimension: TagWorks_SDK_iOS_v1.Dimension)
+  @objc final public func setDynamicCommonDimension(_ dimension: TagWorks_SDK_iOS_v1.Dimension)
+  @objc final public func setDynamicCommonDimension(key: Swift.String, stringValue: Swift.String)
+  @objc final public func setDynamicCommonDimension(key: Swift.String, value: Swift.String)
+  @objc final public func setDynamicCommonDimension(key: Swift.String, numValue: Swift.Double)
+  @objc final public func removeDynamicCommonDimension(key: Swift.String)
+  @objc final public func removeDynamicCommonDimensionWithArrayIndex(_ index: Swift.Int)
+  @objc final public func removeAllDynamicCommonDimension()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func getDynamicCommonDimension(key: Swift.String) -> TagWorks_SDK_iOS_v1.Dimension?
+  #endif
+  @objc final public func getDynamicCommonDimensions() -> [TagWorks_SDK_iOS_v1.Dimension]
+}
+extension TagWorks_SDK_iOS_v1.TagWorks {
+  @objc final public func sendReferrerEvent(openURL: Foundation.URL)
+  @objc final public func sendReferrerEvent(referrer: Swift.String)
+}
+extension TagWorks_SDK_iOS_v1.TagWorks {
+  @objc final public func saveErrorReport(errorType: Swift.String, errorMessage: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers final public class DefaultQueue : ObjectiveC.NSObject, TagWorks_SDK_iOS_v1.Queue {
+  final public var size: Swift.Int {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func enqueue(events: [TagWorks_SDK_iOS_v1.Event], completion: (() -> Swift.Void)?)
+  #endif
+  final public func enqueue(events: [TagWorks_SDK_iOS_v1.Event], completion: @escaping (_ newSize: Swift.Int) -> Swift.Void)
+  final public func remove(events: [TagWorks_SDK_iOS_v1.Event], completion: @escaping () -> Swift.Void)
+  final public func first(limit: Swift.Int, completion: @escaping ([TagWorks_SDK_iOS_v1.Event]) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension TagWorks_SDK_iOS_v1.DataBundle {
+  @objc public static let EVENT_TAG_NAME: Swift.String
+  @objc public static let EVENT_TAG_PARAM_TITLE: Swift.String
+  @objc public static let EVENT_TAG_PARAM_PAGE_PATH: Swift.String
+  @objc public static let EVENT_TAG_PARAM_KEYWORD: Swift.String
+  @objc public static let EVENT_TAG_PARAM_CUSTOM_PATH: Swift.String
+  @objc public static let EVENT_TAG_PARAM_ERROR_MSG: Swift.String
+}
+@_inheritsConvenienceInitializers @objc final public class DataBundle : ObjectiveC.NSObject, Swift.Codable {
+  @objc override dynamic public init()
+  @objc convenience public init(_ bundle: TagWorks_SDK_iOS_v1.DataBundle)
+  @objc(putString:value:) final public func putString(_ key: Swift.String, _ value: Swift.String)
+  @objc final public func remove(forKey key: Swift.String)
+  @objc final public func isParameterEmpty() -> Swift.Bool
+  @objc final public func isDimensionEmpty() -> Swift.Bool
+  @objc final public func parameterCount() -> Swift.Int
+  @objc final public func dimensionCount() -> Swift.Int
+  @objc deinit
+  final public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension TagWorks_SDK_iOS_v1.DataBundle {
+  @objc final public func putDimensions(_ dimensions: [TagWorks_SDK_iOS_v1.Dimension])
+  @objc final public func putDimension(dimension: TagWorks_SDK_iOS_v1.Dimension)
+  @objc final public func putDimension(_ dimension: TagWorks_SDK_iOS_v1.Dimension)
+  @objc final public func putDimension(index: Swift.Int, stringValue: Swift.String)
+  @objc final public func putDimension(index: Swift.Int, value: Swift.String)
+  @objc final public func putDimension(index: Swift.Int, numValue: Swift.Double)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func getDimension(WithType type: Swift.Int, index: Swift.Int) -> TagWorks_SDK_iOS_v1.Dimension?
+  #endif
+  @objc final public func getDimensions() -> [TagWorks_SDK_iOS_v1.Dimension]
+  @objc final public func removeDimension(WithType type: Swift.Int, index: Swift.Int)
+  @objc final public func removeDimensionWithArrayIndex(_ index: Swift.Int)
+  @objc final public func removeAllDimension()
+  @objc final public func putDynamicDimension(dimensions: [TagWorks_SDK_iOS_v1.Dimension])
+  @objc final public func putDynamicDimensions(_ dimensions: [TagWorks_SDK_iOS_v1.Dimension])
+  @objc final public func putDynamicDimension(dimension: TagWorks_SDK_iOS_v1.Dimension)
+  @objc final public func putDynamicDimension(_ dimension: TagWorks_SDK_iOS_v1.Dimension)
+  @objc final public func putDynamicDimension(key: Swift.String, stringValue: Swift.String)
+  @objc final public func putDynamicDimension(key: Swift.String, value: Swift.String)
+  @objc final public func putDynamicDimension(key: Swift.String, numValue: Swift.Double)
+  @objc final public func removeDynamicDimension(key: Swift.String)
+  @objc final public func removeDynamicDimensionWithArrayIndex(_ index: Swift.Int)
+  @objc final public func removeAllDynamicDimension()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func getDynamicDimension(key: Swift.String) -> TagWorks_SDK_iOS_v1.Dimension?
+  #endif
+  @objc final public func getDynamicDimensions() -> [TagWorks_SDK_iOS_v1.Dimension]
+}
+@_hasMissingDesignatedInitializers final public class KeychainStorage {
+  public static let sharedInstance: TagWorks_SDK_iOS_v1.KeychainStorage
+  final public var lastErrorStatus: Darwin.OSStatus {
+    get
+    set
+  }
+  final public var lastErrorDescription: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func findOrCreate() -> Swift.String?
+  #endif
+  final public func remove() -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func renew() -> Swift.String?
+  #endif
+  final public func migrate() -> Swift.Bool
+  final public func isCheckFirstInstall() -> Swift.Bool
+  @objc deinit
+}
+public struct AppInfo {
+  public let bundleDisplayName: Swift.String?
+  public let bundleName: Swift.String?
+  public let bundleIdentifier: Swift.String?
+  public let bundleVersion: Swift.String?
+  public let bundleShortVersion: Swift.String?
+  public static func getApplicationInfo() -> TagWorks_SDK_iOS_v1.AppInfo
+}
+extension TagWorks_SDK_iOS_v1.EventTag : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.EventTag : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.EventTag : Swift.RawRepresentable {}
+extension TagWorks_SDK_iOS_v1.InAppPopupType : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.InAppPopupType : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.InAppPopupType : Swift.RawRepresentable {}
+extension TagWorks_SDK_iOS_v1.InAppPopupButtonType : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.InAppPopupButtonType : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.InAppPopupButtonType : Swift.RawRepresentable {}
+extension TagWorks_SDK_iOS_v1.WebInterface : Swift.Sendable {}
+extension TagWorks_SDK_iOS_v1.Bit : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.Bit : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.Bit : Swift.RawRepresentable {}
+extension TagWorks_SDK_iOS_v1.OFB.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.OFB.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.PCBC.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.PCBC.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.CBC.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.CBC.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.Rabbit.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.Rabbit.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.HKDF.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.HKDF.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.CipherError : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.CipherError : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.FingerprintManager : Swift.Sendable {}
+extension TagWorks_SDK_iOS_v1.WebViewManager : Swift.Sendable {}
+extension TagWorks_SDK_iOS_v1.OCB.Mode : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.OCB.Mode : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.OCB.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.OCB.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.PKCS5.PBKDF1.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.PKCS5.PBKDF1.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.PKCS5.PBKDF1.Variant : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.PKCS5.PBKDF1.Variant : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.AES.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.AES.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.AES.Variant : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.AES.Variant : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.AES.Variant : Swift.RawRepresentable {}
+extension TagWorks_SDK_iOS_v1.SHA3.Variant : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.SHA3.Variant : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.CMAC.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.CMAC.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.Padding : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.Padding : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.CFB.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.CFB.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.ChaCha20.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.ChaCha20.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.SHA2.Variant : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.SHA2.Variant : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.CTR : TagWorks_SDK_iOS_v1.BlockMode {}
+extension TagWorks_SDK_iOS_v1.CTR.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.CTR.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.GCM.Mode : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.GCM.Mode : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.GCM.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.GCM.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.Blowfish.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.Blowfish.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.HMAC.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.HMAC.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.HMAC.Variant : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.HMAC.Variant : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.CCM : TagWorks_SDK_iOS_v1.BlockMode {}
+extension TagWorks_SDK_iOS_v1.CCM.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.CCM.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.Poly1305.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.Poly1305.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.PKCS5.PBKDF2.Error : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.PKCS5.PBKDF2.Error : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.UserAgentFetcher : Swift.Sendable {}
+extension TagWorks_SDK_iOS_v1.Dimension.DimensionType : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.Dimension.DimensionType : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.Dimension.DimensionType : Swift.RawRepresentable {}
+extension TagWorks_SDK_iOS_v1.LogLevel : Swift.Equatable {}
+extension TagWorks_SDK_iOS_v1.LogLevel : Swift.Hashable {}
+extension TagWorks_SDK_iOS_v1.LogLevel : Swift.RawRepresentable {}

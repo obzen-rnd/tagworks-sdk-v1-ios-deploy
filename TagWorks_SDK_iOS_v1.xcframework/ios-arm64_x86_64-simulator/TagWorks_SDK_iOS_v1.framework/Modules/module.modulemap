@@ -1,0 +1,11 @@
+framework module TagWorks_SDK_iOS_v1 {
+  umbrella header "TagWorks_SDK_iOS_v1.h"
+  export *
+
+  module * { export * }
+}
+
+module TagWorks_SDK_iOS_v1.Swift {
+  header "TagWorks_SDK_iOS_v1-Swift.h"
+  requires objc
+}
