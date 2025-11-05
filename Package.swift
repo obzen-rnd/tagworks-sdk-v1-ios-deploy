@@ -21,16 +21,6 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        //.target(
-        //    name: "TagWorks-SDK-iOS-v1",
-        //    dependencies: [
-	//	//"CryptoSwift"
-	//    ],
-        //    path: "TagWorks-SDK-iOS-v1"
-	//),
-        //.testTarget(
-        //    name: "TagWorks-SDK-iOS-v1Tests",
-        //    dependencies: ["TagWorks-SDK-iOS-v1"]),
 
 	// checksum - sha256
 	.binaryTarget(

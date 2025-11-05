@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name             = "TagWorks_SDK_iOS_v1"
-  spec.version          = "1.1.4"
+  spec.version          = "1.1.5"
   spec.summary          = "TagWorks SDK for iOS"
   spec.swift_version    = "5.0"
   # 핵심 설정
@@ -84,8 +84,6 @@ Pod::Spec.new do |spec|
   #
 
   # Nexus에서 xcframework zip 다운로드
-  # spec.source       = { :git => "https://github.com/obzen-rnd/tagworks-sdk-v1-ios-release.git", :tag => spec.version.to_s }
-
   spec.source	    = { :http => "https://support.obzen.com/nexus/repository/releases/com/obzen/tagworks/tagworks-v1-ios-xcframework/1.1.31/tagworks-v1-ios-xcframework-1.1.31.zip"}
 
   # 다운로드 후 포함할 프레임워크 지정
@@ -104,9 +102,6 @@ Pod::Spec.new do |spec|
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
-  # spec.source_files = "TagWorks-SDK-iOS-v1/**/*"
-
-  #spec.source_files = "TagWorks-SDK-iOS-v1/**/*.{h,m,swift}"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -147,7 +142,7 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+
   # spec.dependency "JSONKit", "~> 1.4"
-  # spec.dependency "CryptoSwift", "~> 1.3.8"
 
 end
