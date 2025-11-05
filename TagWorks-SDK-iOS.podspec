@@ -15,8 +15,8 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name             = "TagWorks_SDK_iOS_v1"
-  spec.version          = "1.1.1"
+  spec.name             = "TagWorks-SDK-iOS"
+  spec.version          = "1.1.31"
   spec.summary          = "TagWorks SDK for iOS"
   spec.swift_version    = "5.0"
   # 핵심 설정
@@ -86,7 +86,7 @@ Pod::Spec.new do |spec|
   # Nexus에서 xcframework zip 다운로드
   # spec.source       = { :git => "https://github.com/obzen-rnd/tagworks-sdk-v1-ios-release.git", :tag => spec.version.to_s }
 
-  spec.source	    = { :http => "https://support.obzen.com/nexus/repository/releases/com/obzen/tagworks/tagworks-v1-ios-xcframework/1.1.31/tagworks-v1-ios-xcframework-1.1.31.zip"}
+  spec.source	    = { :http => "https://support.obzen.com/nexus/repository/releases/com/obzen/tagworks/tagworks-v1-ios-xcframework/1.1.30/tagworks-v1-ios-xcframework-1.1.30.zip"}
 
   # 다운로드 후 포함할 프레임워크 지정
   spec.vendored_frameworks = 'TagWorks_SDK_iOS_v1.xcframework'
