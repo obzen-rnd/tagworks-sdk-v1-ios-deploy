@@ -8001,6 +8001,13 @@
         "moduleName": "TagWorks_SDK_iOS_v1"
       },
       {
+        "kind": "Import",
+        "name": "ObjectiveC.runtime",
+        "printedName": "ObjectiveC.runtime",
+        "declKind": "Import",
+        "moduleName": "TagWorks_SDK_iOS_v1"
+      },
+      {
         "kind": "TypeDecl",
         "name": "SwizzlingManager",
         "printedName": "SwizzlingManager",
@@ -30774,6 +30781,106 @@
           },
           {
             "kind": "Var",
+            "name": "testMode",
+            "printedName": "testMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@TagWorks_SDK_iOS_v1@objc(cs)TagWorks(py)testMode",
+            "mangledName": "$s19TagWorks_SDK_iOS_v10aB0C8testModeSbvp",
+            "moduleName": "TagWorks_SDK_iOS_v1",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@TagWorks_SDK_iOS_v1@objc(cs)TagWorks(im)testMode",
+                "mangledName": "$s19TagWorks_SDK_iOS_v10aB0C8testModeSbvg",
+                "moduleName": "TagWorks_SDK_iOS_v1",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@TagWorks_SDK_iOS_v1@objc(cs)TagWorks(im)setTestMode:",
+                "mangledName": "$s19TagWorks_SDK_iOS_v10aB0C8testModeSbvs",
+                "moduleName": "TagWorks_SDK_iOS_v1",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19TagWorks_SDK_iOS_v10aB0C8testModeSbvM",
+                "mangledName": "$s19TagWorks_SDK_iOS_v10aB0C8testModeSbvM",
+                "moduleName": "TagWorks_SDK_iOS_v1",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "isManualDispatch",
             "printedName": "isManualDispatch",
             "children": [
@@ -34254,6 +34361,330 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TagWorks_SDK_iOS_v1",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "TagWorks_SDK_iOS_v1"
+      },
+      {
+        "kind": "Import",
+        "name": "ObjectiveC",
+        "printedName": "ObjectiveC",
+        "declKind": "Import",
+        "moduleName": "TagWorks_SDK_iOS_v1"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FloatingDebugButton",
+        "printedName": "FloatingDebugButton",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sharedInstance",
+            "printedName": "sharedInstance",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FloatingDebugButton",
+                "printedName": "TagWorks_SDK_iOS_v1.FloatingDebugButton",
+                "usr": "s:19TagWorks_SDK_iOS_v119FloatingDebugButtonC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19TagWorks_SDK_iOS_v119FloatingDebugButtonC14sharedInstanceACvpZ",
+            "mangledName": "$s19TagWorks_SDK_iOS_v119FloatingDebugButtonC14sharedInstanceACvpZ",
+            "moduleName": "TagWorks_SDK_iOS_v1",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FloatingDebugButton",
+                    "printedName": "TagWorks_SDK_iOS_v1.FloatingDebugButton",
+                    "usr": "s:19TagWorks_SDK_iOS_v119FloatingDebugButtonC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19TagWorks_SDK_iOS_v119FloatingDebugButtonC14sharedInstanceACvgZ",
+                "mangledName": "$s19TagWorks_SDK_iOS_v119FloatingDebugButtonC14sharedInstanceACvgZ",
+                "moduleName": "TagWorks_SDK_iOS_v1",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "show",
+            "printedName": "show(provider:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> Swift.String",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TagWorks_SDK_iOS_v119FloatingDebugButtonC4show8providerySSyc_tF",
+            "mangledName": "$s19TagWorks_SDK_iOS_v119FloatingDebugButtonC4show8providerySSyc_tF",
+            "moduleName": "TagWorks_SDK_iOS_v1",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hide",
+            "printedName": "hide()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TagWorks_SDK_iOS_v119FloatingDebugButtonC4hideyyF",
+            "mangledName": "$s19TagWorks_SDK_iOS_v119FloatingDebugButtonC4hideyyF",
+            "moduleName": "TagWorks_SDK_iOS_v1",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19TagWorks_SDK_iOS_v119FloatingDebugButtonC",
+        "mangledName": "$s19TagWorks_SDK_iOS_v119FloatingDebugButtonC",
+        "moduleName": "TagWorks_SDK_iOS_v1",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FloatingDebugMenu",
+        "printedName": "FloatingDebugMenu",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sharedInstance",
+            "printedName": "sharedInstance",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FloatingDebugMenu",
+                "printedName": "TagWorks_SDK_iOS_v1.FloatingDebugMenu",
+                "usr": "s:19TagWorks_SDK_iOS_v117FloatingDebugMenuC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19TagWorks_SDK_iOS_v117FloatingDebugMenuC14sharedInstanceACvpZ",
+            "mangledName": "$s19TagWorks_SDK_iOS_v117FloatingDebugMenuC14sharedInstanceACvpZ",
+            "moduleName": "TagWorks_SDK_iOS_v1",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FloatingDebugMenu",
+                    "printedName": "TagWorks_SDK_iOS_v1.FloatingDebugMenu",
+                    "usr": "s:19TagWorks_SDK_iOS_v117FloatingDebugMenuC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19TagWorks_SDK_iOS_v117FloatingDebugMenuC14sharedInstanceACvgZ",
+                "mangledName": "$s19TagWorks_SDK_iOS_v117FloatingDebugMenuC14sharedInstanceACvgZ",
+                "moduleName": "TagWorks_SDK_iOS_v1",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "show",
+            "printedName": "show(actions:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(Swift.String, () -> ())]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.String, () -> ())",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TagWorks_SDK_iOS_v117FloatingDebugMenuC4show7actionsySaySS_yyctG_tF",
+            "mangledName": "$s19TagWorks_SDK_iOS_v117FloatingDebugMenuC4show7actionsySaySS_yyctG_tF",
+            "moduleName": "TagWorks_SDK_iOS_v1",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hide",
+            "printedName": "hide()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19TagWorks_SDK_iOS_v117FloatingDebugMenuC4hideyyF",
+            "mangledName": "$s19TagWorks_SDK_iOS_v117FloatingDebugMenuC4hideyyF",
+            "moduleName": "TagWorks_SDK_iOS_v1",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:19TagWorks_SDK_iOS_v117FloatingDebugMenuC",
+        "mangledName": "$s19TagWorks_SDK_iOS_v117FloatingDebugMenuC",
+        "moduleName": "TagWorks_SDK_iOS_v1",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -42415,112 +42846,112 @@
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 309,
+      "offset": 335,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "Dictionary",
-      "offset": 361,
+      "offset": 387,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "StringLiteral",
-      "offset": 9245,
+      "offset": 16575,
       "length": 20,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "StringLiteral",
-      "offset": 9252,
+      "offset": 16582,
       "length": 1,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "StringLiteral",
-      "offset": 9264,
+      "offset": 16594,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "StringLiteral",
-      "offset": 10513,
+      "offset": 17843,
       "length": 26,
       "value": "\"Type casting to T failed\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "StringLiteral",
-      "offset": 11645,
+      "offset": 18975,
       "length": 33,
       "value": "\"Type casting to T1 or T2 failed\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "StringLiteral",
-      "offset": 12924,
+      "offset": 20254,
       "length": 39,
       "value": "\"Type casting to T1 or T2 or T3 failed\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "StringLiteral",
-      "offset": 13879,
+      "offset": 21209,
       "length": 75,
       "value": "\"🕵️[TagWorks Method Check] Method not found for selector: \""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "StringLiteral",
-      "offset": 13953,
+      "offset": 21283,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "StringLiteral",
-      "offset": 14256,
+      "offset": 21586,
       "length": 33,
       "value": "\"Type casting to T1 or T2 failed\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 14606,
+      "offset": 21936,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "StringLiteral",
-      "offset": 15604,
+      "offset": 22934,
       "length": 44,
       "value": "\"Method not found for selector: \""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "StringLiteral",
-      "offset": 15647,
+      "offset": 22977,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "StringLiteral",
-      "offset": 15997,
+      "offset": 23327,
       "length": 33,
       "value": "\"Type casting to T1 or T2 failed\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Manager\/SwizzlingManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 16347,
+      "offset": 23677,
       "length": 1,
       "value": "0"
     },
@@ -43618,199 +44049,437 @@
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6868,
-      "length": 5,
-      "value": "false"
+      "kind": "StringLiteral",
+      "offset": 7283,
+      "length": 15,
+      "value": "\"로그 전송\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 7420,
+      "length": 18,
+      "value": "\"테스트_로그\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 7515,
+      "length": 18,
+      "value": "\"테스트_로그\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 7739,
+      "length": 22,
+      "value": "\"로그 전송 결과\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 7781,
+      "length": 15,
+      "value": "\"전송 성공\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 7799,
+      "length": 15,
+      "value": "\"전송 실패\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 7901,
+      "length": 8,
+      "value": "\"확인\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 6930,
-      "length": 5,
-      "value": "false"
+      "offset": 8059,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 8110,
+      "length": 15,
+      "value": "\"설정 보기\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 8167,
+      "length": 175,
+      "value": "\"siteId: \""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 8193,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 8196,
+      "length": 1,
+      "value": "\"\n\n로그수집 서버: \""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 8267,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 8270,
+      "length": 1,
+      "value": "\"\n\n딥링크 서버: \""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 8338,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 8341,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 8404,
+      "length": 22,
+      "value": "\"SDK 설정값 확인\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 8531,
+      "length": 8,
+      "value": "\"확인\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 7557,
-      "length": 5,
-      "value": "false"
+      "offset": 8689,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 8740,
+      "length": 31,
+      "value": "\"사용자 로그인 아이디\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 8836,
+      "length": 8,
+      "value": "\"userId\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 8953,
+      "length": 8,
+      "value": "\"확인\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 7809,
-      "length": 5,
-      "value": "false"
+      "offset": 9111,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 9162,
+      "length": 37,
+      "value": "\"디바이스 방문자 식별번호\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 9264,
+      "length": 12,
+      "value": "\"visitor_id\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 9388,
+      "length": 8,
+      "value": "\"확인\""
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 8020,
+      "offset": 9546,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 8165,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8223,
+      "offset": 7003,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 8282,
+      "offset": 9676,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9738,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10365,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10617,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10828,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 8334,
+      "offset": 10973,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11031,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11090,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11142,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "Array",
-      "offset": 8496,
+      "offset": 11304,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "FloatLiteral",
-      "offset": 9437,
+      "offset": 12245,
       "length": 3,
       "value": "3.0"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "FloatLiteral",
-      "offset": 10845,
+      "offset": 13653,
       "length": 3,
       "value": "3.0"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "FloatLiteral",
-      "offset": 10921,
+      "offset": 13729,
       "length": 3,
       "value": "5.0"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "FloatLiteral",
-      "offset": 12346,
+      "offset": 15154,
       "length": 3,
       "value": "3.0"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "FloatLiteral",
-      "offset": 12422,
+      "offset": 15230,
       "length": 3,
       "value": "5.0"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 12558,
+      "offset": 15366,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 12766,
+      "offset": 15574,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 12834,
+      "offset": 15642,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "FloatLiteral",
-      "offset": 14022,
+      "offset": 16830,
       "length": 3,
       "value": "3.0"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "FloatLiteral",
-      "offset": 14109,
+      "offset": 16917,
       "length": 3,
       "value": "5.0"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 14245,
+      "offset": 17053,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 14453,
+      "offset": 17261,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 14521,
+      "offset": 17329,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "FloatLiteral",
-      "offset": 19120,
+      "offset": 21928,
       "length": 3,
       "value": "3.0"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "FloatLiteral",
-      "offset": 19207,
+      "offset": 22015,
       "length": 3,
       "value": "5.0"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 19277,
+      "offset": 22085,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 19485,
+      "offset": 22293,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
       "kind": "BooleanLiteral",
-      "offset": 19553,
+      "offset": 22361,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 30268,
+      "length": 28,
+      "value": "\"com.tagworks.dispatchQueue\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/TagWorks.swift",
+      "kind": "StringLiteral",
+      "offset": 31922,
+      "length": 25,
+      "value": "\"com.tagworks.eventQueue\""
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Util\/FloatingDebugButton.swift",
+      "kind": "IntegerLiteral",
+      "offset": 178,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Util\/FloatingDebugButton.swift",
+      "kind": "Array",
+      "offset": 1745,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Util\/FloatingDebugButton.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1777,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Util\/FloatingDebugButton.swift",
+      "kind": "Array",
+      "offset": 1833,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/obzen\/01.Kevin\/01.Projects\/01.iOS\/01.TagWorks_SDK\/TagWorks-SDK-iOS-v1\/TagWorks-SDK-iOS-v1\/Data\/DataBundle.swift",

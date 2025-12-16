@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/TagWorks_SDK_iOS_v1-Swift.h</key>
 		<data>
-		1PNnZHkX2r4gcaLpynnA+5HJL5E=
+		uBwYiCKakoem9VL5E9L6FDzp+mM=
 		</data>
 		<key>Headers/TagWorks_SDK_iOS_v1.h</key>
 		<data>
@@ -22,47 +22,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dvSBBplAzUcaUBUFbxdyALbVdz4=
+		X55VABJ7iWklwnECd20JmX99zek=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		M88QOLd8EPYGMXDezqCDv9zjd0c=
+		slFHbCq21PJc7dlIEKes7he2OCY=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		9M26951ODlZwJuIncZUN71b0jd8=
+		GKzZPjZ2rwvnw6fOrMMyKlaB5mY=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		V8U5T8U6Mp63uSQw9f9V+I3UfZw=
+		yhR9YWf/lqBRxxMbpyKcmvz1jRA=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		9M26951ODlZwJuIncZUN71b0jd8=
+		GKzZPjZ2rwvnw6fOrMMyKlaB5mY=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		V2tOKADrGiz3tHSJbDMiWfV5s1o=
+		Y10/XUvh01Qf9wtoqyTqGyqneBo=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		M88QOLd8EPYGMXDezqCDv9zjd0c=
+		slFHbCq21PJc7dlIEKes7he2OCY=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		5Fw03cXkYllmmkJYcZsGgX4X+3U=
+		8uFuUEShLIu4fLSYLjoX5X8ly5Q=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		qyfgARzcECggRuozaFbTEvlIIcI=
+		Zx65jd4dYJRf0YXUQEUAHTc2wbQ=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		5Fw03cXkYllmmkJYcZsGgX4X+3U=
+		8uFuUEShLIu4fLSYLjoX5X8ly5Q=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		e1HzuOg232lHCzNcoo+9Lu5szY8=
+		Dn5DIJdRDvjiAaRpozHGT6wGYJM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -117,11 +117,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1PNnZHkX2r4gcaLpynnA+5HJL5E=
+			uBwYiCKakoem9VL5E9L6FDzp+mM=
 			</data>
 			<key>hash2</key>
 			<data>
-			uMiNg+fagxKSaa5C7SaZ7zJH7j3OBe3fD0+p2M37RDw=
+			mVtZTXO/wF8Gaf3m8cULN/nDL9EJb3W+6EkpbUdo3qU=
 			</data>
 		</dict>
 		<key>Headers/TagWorks_SDK_iOS_v1.h</key>
@@ -139,110 +139,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			M88QOLd8EPYGMXDezqCDv9zjd0c=
+			slFHbCq21PJc7dlIEKes7he2OCY=
 			</data>
 			<key>hash2</key>
 			<data>
-			V/L+3sE4xMhxEFh8wcFpKVySx/3sfoQ24bymUsRtIvo=
+			zu68dNwFrYszZZZfMrh2Ku3ANSf5k1or+YjyZp3DEaU=
 			</data>
 		</dict>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9M26951ODlZwJuIncZUN71b0jd8=
+			GKzZPjZ2rwvnw6fOrMMyKlaB5mY=
 			</data>
 			<key>hash2</key>
 			<data>
-			+9OAeWnw0em96savtl1FChg+DEQDpKp5jluFoz5aWjg=
+			OUGzJsZL9Ao95sF5f2kb0zneMJ8v5cJdYp2NVSvLls0=
 			</data>
 		</dict>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			V8U5T8U6Mp63uSQw9f9V+I3UfZw=
+			yhR9YWf/lqBRxxMbpyKcmvz1jRA=
 			</data>
 			<key>hash2</key>
 			<data>
-			GKEX1EIGbMmCQtviXgNZm+nurtTM/SykK9+7r2UWLAA=
+			olqsWIo9l3U+I1DoCeq9ohC4UFEAZiw0EUQMHKl4XlQ=
 			</data>
 		</dict>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9M26951ODlZwJuIncZUN71b0jd8=
+			GKzZPjZ2rwvnw6fOrMMyKlaB5mY=
 			</data>
 			<key>hash2</key>
 			<data>
-			+9OAeWnw0em96savtl1FChg+DEQDpKp5jluFoz5aWjg=
+			OUGzJsZL9Ao95sF5f2kb0zneMJ8v5cJdYp2NVSvLls0=
 			</data>
 		</dict>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			V2tOKADrGiz3tHSJbDMiWfV5s1o=
+			Y10/XUvh01Qf9wtoqyTqGyqneBo=
 			</data>
 			<key>hash2</key>
 			<data>
-			2C3nKpFbum02NPPosVwLvKfMwojOASdcIRhSl8EK20E=
+			cF53F2UotjQcJDyeIAs4Bp4aT91o3j3+fwN6woKntI4=
 			</data>
 		</dict>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			M88QOLd8EPYGMXDezqCDv9zjd0c=
+			slFHbCq21PJc7dlIEKes7he2OCY=
 			</data>
 			<key>hash2</key>
 			<data>
-			V/L+3sE4xMhxEFh8wcFpKVySx/3sfoQ24bymUsRtIvo=
+			zu68dNwFrYszZZZfMrh2Ku3ANSf5k1or+YjyZp3DEaU=
 			</data>
 		</dict>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5Fw03cXkYllmmkJYcZsGgX4X+3U=
+			8uFuUEShLIu4fLSYLjoX5X8ly5Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			w/b+sIbARv385bO/FBn5e2aGy6YtZTLPO/SeLyIsw48=
+			i90alW4Q1/RTYlDhKIK0YpY1Ondly6Pb7XuL7ioQrGg=
 			</data>
 		</dict>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qyfgARzcECggRuozaFbTEvlIIcI=
+			Zx65jd4dYJRf0YXUQEUAHTc2wbQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			3SJ10KcNbaMB/eXEmx1xZMc34PTINSen7Maj/qIWooM=
+			N7xXbnH4MXwphYTtwIq1YFOE8vMFCL2/BQ0oGMOGMUA=
 			</data>
 		</dict>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5Fw03cXkYllmmkJYcZsGgX4X+3U=
+			8uFuUEShLIu4fLSYLjoX5X8ly5Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			w/b+sIbARv385bO/FBn5e2aGy6YtZTLPO/SeLyIsw48=
+			i90alW4Q1/RTYlDhKIK0YpY1Ondly6Pb7XuL7ioQrGg=
 			</data>
 		</dict>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			e1HzuOg232lHCzNcoo+9Lu5szY8=
+			Dn5DIJdRDvjiAaRpozHGT6wGYJM=
 			</data>
 			<key>hash2</key>
 			<data>
-			n/u5OUQ7qz7ISoSmgK2Zklv406JRsQ1vwJ3fhQ0hUvM=
+			xXeyHlIZ3aGU3SC597O4ARNkvyP+B7n9OhokPl3FZns=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

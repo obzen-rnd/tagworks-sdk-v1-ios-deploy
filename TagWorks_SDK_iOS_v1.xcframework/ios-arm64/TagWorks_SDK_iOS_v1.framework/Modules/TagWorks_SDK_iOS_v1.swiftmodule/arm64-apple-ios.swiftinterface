@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name TagWorks_SDK_iOS_v1
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import AdSupport
 import AppTrackingTransparency
 import CoreGraphics
@@ -1122,6 +1122,10 @@ extension Foundation.NSNotification.Name {
   @objc final public var currentContentUrlPath: Foundation.URL?
   @objc final public var isDebugLogPrint: Swift.Bool
   @objc final public var isDebugLogPost: Swift.Bool
+  @objc final public var testMode: Swift.Bool {
+    @objc get
+    @objc set
+  }
   @objc final public var isManualDispatch: Swift.Bool
   @objc final public var isUseDynamicParameter: Swift.Bool
   @objc final public let webViewInterface: TagWorks_SDK_iOS_v1.WebInterface
@@ -1212,6 +1216,18 @@ extension TagWorks_SDK_iOS_v1.TagWorks {
   final public func remove(events: [TagWorks_SDK_iOS_v1.Event], completion: @escaping () -> Swift.Void)
   final public func first(limit: Swift.Int, completion: @escaping ([TagWorks_SDK_iOS_v1.Event]) -> Swift.Void)
   @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FloatingDebugButton {
+  public static let sharedInstance: TagWorks_SDK_iOS_v1.FloatingDebugButton
+  public func show(provider: @escaping () -> Swift.String)
+  public func hide()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FloatingDebugMenu {
+  public static let sharedInstance: TagWorks_SDK_iOS_v1.FloatingDebugMenu
+  public func show(actions: [(Swift.String, () -> Swift.Void)])
+  public func hide()
   @objc deinit
 }
 extension TagWorks_SDK_iOS_v1.DataBundle {

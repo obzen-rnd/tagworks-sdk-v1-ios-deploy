@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/TagWorks_SDK_iOS_v1-Swift.h</key>
 		<data>
-		wXeWPBwCF02On2fk7AKfcpBnF8U=
+		cKi5oRhHTCFtWZbgCB1HBEptz+Y=
 		</data>
 		<key>Headers/TagWorks_SDK_iOS_v1.h</key>
 		<data>
@@ -22,27 +22,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TzTDL9gIWfo1jwdou/UpNL4sNEs=
+		G24R4/ab1GHZ2mW0e4SzanvovW0=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		M88QOLd8EPYGMXDezqCDv9zjd0c=
+		slFHbCq21PJc7dlIEKes7he2OCY=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		VFzqddZ6YYQ+CJhXc8t//nArx1I=
+		pQNpv56/4bAknn/+MQhUuu9DPSU=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		fYU8rPkePP/1IwVCemp8HStRj80=
+		mXMu/bZYfjvJhhtzXqjCouDC6jc=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		VFzqddZ6YYQ+CJhXc8t//nArx1I=
+		pQNpv56/4bAknn/+MQhUuu9DPSU=
 		</data>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		LzyHBqWj1DJOG+U4SgjTbSR5Evc=
+		JdrK3oKhfJARMqVYlr02QmHh7QE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -97,11 +97,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wXeWPBwCF02On2fk7AKfcpBnF8U=
+			cKi5oRhHTCFtWZbgCB1HBEptz+Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			4YRp1SVSj4K6+4WudO5Jq6iNSyAqsgvubBKkIgc/Dy8=
+			YiSaGG1aLyj7klP3ruk/OjnNZuH/ugLEFoIq604QRwQ=
 			</data>
 		</dict>
 		<key>Headers/TagWorks_SDK_iOS_v1.h</key>
@@ -119,55 +119,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			M88QOLd8EPYGMXDezqCDv9zjd0c=
+			slFHbCq21PJc7dlIEKes7he2OCY=
 			</data>
 			<key>hash2</key>
 			<data>
-			V/L+3sE4xMhxEFh8wcFpKVySx/3sfoQ24bymUsRtIvo=
+			zu68dNwFrYszZZZfMrh2Ku3ANSf5k1or+YjyZp3DEaU=
 			</data>
 		</dict>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VFzqddZ6YYQ+CJhXc8t//nArx1I=
+			pQNpv56/4bAknn/+MQhUuu9DPSU=
 			</data>
 			<key>hash2</key>
 			<data>
-			+wOZat6c+9toJRctlMHBr/8Jh5FmjvD4584athj2Xq0=
+			vpD0j+DyCKvZ3YZGvizotBqZk6pPkklIP7b5LlZKGy8=
 			</data>
 		</dict>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fYU8rPkePP/1IwVCemp8HStRj80=
+			mXMu/bZYfjvJhhtzXqjCouDC6jc=
 			</data>
 			<key>hash2</key>
 			<data>
-			ocbPfOFiJc1F4it2MRc8tkz9gaxbhN+KdcvBlvb3PZ8=
+			rrAdjPUiGks0KCNvIFYchFwxJMFugcoSHof/DbZ/pSQ=
 			</data>
 		</dict>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VFzqddZ6YYQ+CJhXc8t//nArx1I=
+			pQNpv56/4bAknn/+MQhUuu9DPSU=
 			</data>
 			<key>hash2</key>
 			<data>
-			+wOZat6c+9toJRctlMHBr/8Jh5FmjvD4584athj2Xq0=
+			vpD0j+DyCKvZ3YZGvizotBqZk6pPkklIP7b5LlZKGy8=
 			</data>
 		</dict>
 		<key>Modules/TagWorks_SDK_iOS_v1.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LzyHBqWj1DJOG+U4SgjTbSR5Evc=
+			JdrK3oKhfJARMqVYlr02QmHh7QE=
 			</data>
 			<key>hash2</key>
 			<data>
-			B0iSfPdNjMU9wiEbN1UqbD19vmzhbDRi14ixvZ9Fq/8=
+			vD4PwBoh9JcAsZIKsny5n9g5YNUniih89cZQkWmbfXQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
