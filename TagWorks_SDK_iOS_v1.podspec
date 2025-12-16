@@ -84,7 +84,7 @@ Pod::Spec.new do |spec|
   #
 
   # Nexus에서 xcframework zip 다운로드
-  spec.source	    = { :http => "https://support.obzen.com/nexus/repository/releases/com/obzen/tagworks/tagworks-v1-ios-xcframework/1.1.31/tagworks-v1-ios-xcframework-1.1.31.zip"}
+  spec.source	    = { :http => "https://support.obzen.com/nexus/repository/releases/com/obzen/tagworks/tagworks-v1-ios-xcframework/1.1.32/tagworks-v1-ios-xcframework-1.1.32.zip"}
 
   # 다운로드 후 포함할 프레임워크 지정
   spec.vendored_frameworks = 'TagWorks_SDK_iOS_v1.xcframework'
