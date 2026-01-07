@@ -25,8 +25,8 @@ let package = Package(
 	// checksum - sha256
 	.binaryTarget(
 		name: "TagWorks_SDK_iOS_v1",
-		url: "https://support.obzen.com/nexus/repository/releases/com/obzen/tagworks/tagworks-v1-ios-xcframework/1.1.32/tagworks-v1-ios-xcframework-1.1.32.zip",
-		checksum: "a3bd97841583a96ed9e203e0e26109256fd94df58730f700c428af6f3a677142"
+		url: "https://support.obzen.com/nexus/repository/releases/com/obzen/tagworks/tagworks-v1-ios-xcframework/1.1.33/tagworks-v1-ios-xcframework-1.1.33.zip",
+		checksum: "2806477962aef894a6f6852adf7de66654bbff770a0963fd7394cb5683767a4c"
 	)
     ]
     //swiftLanguageVersions: [.v5]
